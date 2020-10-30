@@ -1,6 +1,6 @@
 # 极光推送服务端api封装
 
-本项目是在github.com/ylywyn/jpush-api-go-client原有基础上增加第三方厂商推送，具体使用参考https//github.com/ylywyn/jpush-api-go-client
+本项目是在github.com/ylywyn/jpush-api-go-client原有基础上增加第三方厂商推送，具体使用参考https://github.com/ylywyn/jpush-api-go-client
 
 
 
