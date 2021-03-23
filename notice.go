@@ -2,7 +2,7 @@ package jpushclient
 
 type Notice struct {
 	Alert    string          `json:"alert,omitempty"`
-	Android  *AndroidNotice  `json:"android,omitempty"`
+	Android  interface{}  `json:"android,omitempty"`
 	IOS      *IOSNotice      `json:"ios,omitempty"`
 	WINPhone *WinPhoneNotice `json:"winphone,omitempty"`
 }
@@ -12,9 +12,6 @@ type AndroidNotice struct {
 	Title       string                 `json:"title,omitempty"`
 	BuilderId   int                    `json:"builder_id,omitempty"`
 	Extras      map[string]interface{} `json:"extras,omitempty"`
-	Intent      interface{}            `json:"intent"`
-	UriActivity string                 `json:"uri_activity"`
-	UriAction   string                 `json:"uri_action"`
 }
 
 type IOSNotice struct {
@@ -38,7 +35,7 @@ func (this *Notice) SetAlert(alert string) {
 	this.Alert = alert
 }
 
-func (this *Notice) SetAndroidNotice(n *AndroidNotice) {
+func (this *Notice) SetAndroidNotice(n interface{}) {
 	this.Android = n
 }
 
